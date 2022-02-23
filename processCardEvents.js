@@ -43,10 +43,9 @@ let eventsArr = [
 //Please note the function is written in Javascript.
 function processCardEvents(eventsArr) {
   let obj = {}
-  for (let i = 0; i < eventsArr.length; i++) {
-    let temp
-    if (eventsArr[i].type === "RESERVATION" && obj[eventsArr[i].cardId] === undefined) {
 
+  for (let i = 0; i < eventsArr.length; i++) {
+    if (eventsArr[i].type === "RESERVATION" && obj[eventsArr[i].cardId] === undefined) {
       obj[eventsArr[i].cardId] = [eventsArr[i]]
     }
 
